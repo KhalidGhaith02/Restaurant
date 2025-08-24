@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solace</title>
+    
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" data-page="home">Solace</a>
+            <ul class="nav-links">
+              <li><a href="#" data-page="home" data-en="Home" data-ar="الرئيسية" class="active">Home</a></li>
+              <li><a href="#" data-page="menu" data-en="Menu" data-ar="القائمة">Menu</a></li>
+              <li><a href="#" data-page="about" data-en="About" data-ar="من نحن">About</a></li>
+              <li><a href="#" data-page="contact" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+              <li class="language-toggle-container">
+                <button id="languageToggle" class="language-toggle" aria-label="Toggle language">
+                  <span class="lang-en active">EN</span><span class="lang-ar">AR</span>
+                </button>
+              </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Home Page -->
+    <div id="home" class="page">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title" data-en="Solace" data-ar="سولاس">Solace</h1>
+                <p class="hero-subtitle" 
+                    data-en="Where culinary artistry meets modern elegance"
+                    data-ar="حيث يلتقي الفن الطهوي بالأناقة العصرية في قلب جدة">Where culinary artistry meets modern elegance</p>
+                <div class="hero-buttons">
+                    <a href="#" class="cta-button secondary" data-page="contact" 
+                        data-en="Make Reservation" 
+                        data-ar="احجز طاولة">Make Reservation</a>
+                    <a href="#" class="cta-button primary" data-page="menu" 
+                        data-en="Explore Menu" 
+                        data-ar="استكشف القائمة">Explore Menu</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Menu Page -->
+    <div id="menu" class="page">
+        <div class="page-container">
+            <h1 class="page-title" data-en="Our Menu" data-ar="قائمتنا">Our Menu</h1>
+            <div class="menu-categories">
+              <button class="category-btn active" data-category="appetizers">Appetizers</button>
+              <button class="category-btn" data-category="mains">Main Courses</button>
+              <button class="category-btn" data-category="desserts">Desserts</button>
+              <button class="category-btn" data-category="drinks">Drinks</button>
+            </div>
+            
+            <div class="menu-grid" id="menuItems">
+                <!-- Appetizers Section -->
+                <h2 class="category-header" data-category="appetizers" data-en="Appetizers" data-ar="المقبلات">Appetizers</h2>
+                <div class="menu-items" data-category="appetizers">
+                    <!-- Truffle Parmesan Fries -->
+                    <div class="menu-item" data-category="appetizers">
+                        <a href="#" class="menu-item-link">
+                              <img 
+                                class="menu-item-image"
+                                src="truffle-parmesan-fries.png"
+                                alt="Truffle Parmesan Fries"
+                            />
+                            <div class="menu-item-content">
+                                <div class="item-info">
+                                    <h3 data-en="Truffle Parmesan Fries" data-ar="بطاطس بالكمأة والبارميزان">Truffle Parmesan Fries</h3>
+                                    <p class="item-description"
+                                        data-en="Hand-cut fries tossed with black truffle oil, grated parmesan, and chives"
+                                        data-ar="بطاطس مقطعة يدويًا ممزوجة بزيت الكمأة السوداء وبارميزان مبشور وثوم معمر">
+                                    </p>
+                                </div>
+                                <span class="item-price">52 ريال</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Mini Wagyu Sliders -->
+                    <div class="menu-item" data-category="appetizers">
+                        <a href="#" class="menu-item-link">
+                            <img 
+                                class="menu-item-image"
+                                src="images.jpeg"
+                                alt="Mini Wagyu Sliders"
+                            />
+                            <div class="menu-item-content">
+                                <div class="item-info">
+                                    <h3 data-en="Mini Wagyu Sliders" data-ar="ميني سلايدر واجيو">Mini Wagyu Sliders</h3>
+                                    <p class="item-description"
+                                        data-en="Two A5 wagyu sliders with caramelized onions, truffle aioli, and milk brioche"
+                                        data-ar="قطعتان من سلايدر واجيو A5 مع بصل مكرمل وآيولي الكمأة وبريوش طري">
+                                    </p>
+                                </div>
+                                <span class="item-price">50 ريال</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Brisket Fries -->
+                    <div class="menu-item" data-category="appetizers">
+                        <a href="#" class="menu-item-link">
+                            <img 
+                                class="menu-item-image"
+                                src="brisket-fries.jpg"
+                                alt="Brisket Fries"
+                            />
+                            <div class="menu-item-content">
+                                <div class="item-info">
+                                    <h3 data-en="Brisket Fries" data-ar="بطاطس بريسكت">Brisket Fries</h3>
+                                    <p class="item-description"
+                                        data-en="Crispy fries topped with smoked beef brisket, cheddar, and house jus"
+                                        data-ar="بطاطس مقرمشة تعلوها بريسكت بقري مُدخّن وجبن شيدر وصوص المطعم">
+                                    </p>
+                                </div>
+                                <span class="item-price">58 ريال</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+  
+                <h2 class="category-header" data-category="mains" data-en="Main Courses" data-ar="الأطباق الرئيسية">Main Courses</h2>
+                <div class="menu-items" data-category="mains">
+                    <!-- Ribeye steak -->
+                    <div class="menu-item" data-category="mains">
+                        <a href="#" class="menu-item-link">
+                            <img 
+                                class="menu-item-image"
+                                src="ribeye.jpg"
+                                alt="Ribeye Steak"
+                            />
+                            <div class="menu-item-content">
+                                <div class="item-info">
+                                    <h3 data-en="Ribeye Steak" data-ar="ريب آي ستيك">Ribeye Steak</h3>
+                                    <p class="item-description"
+                                        data-en="Charcoal-seared ribeye finished with thyme butter and sea-salt flakes, served with a light peppercorn jus"
+                                        data-ar="ريب آي مُحمّر على الفحم ومُنهي بزبدة الزعتر ورقائق الملح البحري، يُقدّم مع صوص الفلفل الخفيف">
+                                       Charcoal-seared ribeye finished with thyme butter and sea-salt flakes, served with a light peppercorn ju.
+                                    </p>
+                                </div>
+                                <span class="item-price">250 ريال</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Beef Brisket -->
+                    <div class="menu-item" data-category="mains">
+                        <a href="#" class="menu-item-link">
+                            <img 
+                                class="menu-item-image"
+                                src="brisket.webp"
+                                alt="Beef Brisket"
+                            />
+                            <div class="menu-item-content">
+                                <div class="item-info">
+                                    <h3 data-en="Beef Brisket"
+                                     data-ar="بريسكت لحم بقري">BEEF BRISKET
+                                       </h3>
+                                    <p class="item-description"
+                                        data-en="Tender Smoked Brisket. it comes with 14 sauces, 7 Salads."
+                                        data-ar="بريسكت مدخّن طري. يأتي مع ١٤ صوصًا و٧ سلطات">
+                                        Tender Smoked Brisket. it comes with 14 sauces, 7 Salads.
+                                    </p>
+                                </div>
+                                <span class="item-price">200 ريال</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Smoked Brisket Platter -->
+                    <div class="menu-item" data-category="mains">
+                        <a href="#" class="menu-item-link">
+                            <img 
+                                class="menu-item-image"
+                                src="steak.webp"
+                                alt="classic Strip Steak"
+                            />
+                            <div class="menu-item-content">
+                                <div class="item-info">
+                                    <h3 data-en="Classic Strip Steak" data-ar="ستيك كلاسيكي ">Classic Strip Steak</h3>
+                                    <p class="item-description"
+                                        data-en="char-grilled striploin, simply seasoned with sea salt and black pepper, finished with herb butter."
+                                        data-ar="ستيك ستربلوين ٢٥٠جم مشوي على الفحم، مُتبّل بملح بحري وفلفل أسود فقط، ومُنهى بزبدة الأعشاب.">
+                                    </p>
+                                </div>
+                                <span class="item-price">180 ريال</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+               <!-- Desserts Section -->
+<h2 class="category-header" data-category="desserts">Desserts</h2>
+<div class="menu-items" data-category="desserts">
+
+  <div class="menu-item" data-category="desserts">
+    <a href="#" class="menu-item-link">
+      <img
+        src="fondant.jpg"
+        alt="Dark Chocolate Fondant"
+        class="menu-item-image"
+      >
+      <div class="menu-item-content">
+        <div class="item-info">
+          <h3 data-en="Dark Chocolate Fondant" data-ar="فوندان شوكولاتة">Dark Chocolate Fondant</h3>
+          <p class="item-description"
+             data-en="Warm molten chocolate cake with a liquid center, sea salt flakes, and vanilla bean ice cream"
+             data-ar="فوندان شوكولاتة دافئ بقلب سائل مع رقائق ملح بحري وآيس كريم فانيلا طبيعي">
+             Warm molten chocolate cake with a liquid center, sea salt flakes, and vanilla bean ice cream
+          </p>
+        </div>
+        <span class="item-price">70 ريال</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="menu-item" data-category="desserts">
+    <a href="#" class="menu-item-link">
+      <img
+        src="cheesecake.jpg"
+        alt="New York Cheesecake"
+        class="menu-item-image"
+      >
+      <div class="menu-item-content">
+        <div class="item-info">
+          <h3 data-en="New York Cheesecake" data-ar="تشيزكيك نيويورك">New York Cheesecake</h3>
+          <p class="item-description"
+             data-en="Creamy baked cheesecake on a buttery biscuit base, lemon zest, raspberry coulis & fresh berries"
+             data-ar="تشيزكيك مخبوز كريمي على قاعدة بسكويت بالزبدة مع لمسة قشر ليمون وصوص توت أحمر وتوت طازج">
+             Creamy baked cheesecake on a buttery biscuit base, lemon zest, raspberry coulis & fresh berries
+          </p>
+        </div>
+        <span class="item-price">65 ريال</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="menu-item" data-category="desserts">
+    <a href="#" class="menu-item-link">
+      <img
+        src="Sticky-Date-Pudding.webp"
+        alt="Sticky Toffee Date Pudding"
+        class="menu-item-image"
+      >
+      <div class="menu-item-content">
+        <div class="item-info">
+          <h3 data-en="Sticky Toffee Date Pudding" data-ar="ستكي توفي ديّت بودينغ">Sticky Toffee Date Pudding</h3>
+          <p class="item-description"
+             data-en="Warm date sponge soaked in cardamom toffee sauce, finished with mascarpone cream"
+             data-ar="كيك تمر دافئ مُشبّع بصوص توفي بالهيل ويُقدّم مع كريمة ماسكربون">
+             Warm date sponge soaked in cardamom toffee sauce, finished with mascarpone cream
+          </p>
+        </div>
+        <span class="item-price">68 ريال</span>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+<!-- Drinks Section -->
+<h2 class="category-header" data-category="drinks">Drinks</h2>
+<div class="menu-items" data-category="drinks">
+
+  <!-- Soft Drinks -->
+  <div class="menu-item" data-category="drinks">
+    <a href="#" class="menu-item-link">
+      <img
+        src="soft.jpeg"
+        alt="Assorted Soft Drinks"
+        class="menu-item-image"
+      />
+      <div class="menu-item-content">
+        <div class="item-info">
+          <h3 data-en="Assorted Soft Drinks" data-ar="مشروبات غازية">Assorted Soft Drinks</h3>
+          <p class="item-description"
+             data-en="Cola, diet cola, lemon-lime or orange — served chilled with ice and fresh lemon"
+             data-ar="كولا، دايت كولا، ليمون-لايم أو برتقال — تُقدّم باردة مع ثلج وشرائح ليمون">
+             Cola, diet cola, lemon-lime or orange — served chilled with ice and fresh lemon
+          </p>
+        </div>
+        <span class="item-price">7 ريال</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Water -->
+  <div class="menu-item" data-category="drinks">
+    <a href="#" class="menu-item-link">
+      <img
+        src="water.jpg"
+        alt="Still / Sparkling Water (750ml)"
+        class="menu-item-image"
+      />
+      <div class="menu-item-content">
+        <div class="item-info">
+          <h3 data-en="Still / Sparkling Water (750ml)" data-ar="ماء (معدني/فوّار 750 مل)">Still / Sparkling Water (750ml)</h3>
+          <p class="item-description"
+             data-en="Premium mineral water of your choice — perfectly chilled"
+             data-ar="ماء معدني فاخر حسب اختيارك (عادي أو فوّار) — مبرد بعناية">
+             Premium mineral water of your choice — perfectly chilled
+          </p>
+        </div>
+        <span class="item-price">12 ريال</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Mocktail -->
+  <div class="menu-item" data-category="drinks">
+    <a href="#" class="menu-item-link">
+      <img
+        src="mocktail.jpg"
+        alt="Golden Citrus Fizz (Mocktail)"
+        class="menu-item-image"
+      />
+      <div class="menu-item-content">
+        <div class="item-info">
+          <h3 data-en="Golden Citrus Fizz (Mocktail)" data-ar="غولدن سيتروس فيز (موكتيل)">Golden Citrus Fizz (Mocktail)</h3>
+          <p class="item-description"
+             data-en="Fresh lemon & orange, honey-ginger syrup, mint, and a sparkling finish"
+             data-ar="ليمون وبرتقال طازج، سيرب عسل-زنجبيل، نعناع، ولمسة فوّارة منعشة">
+             Fresh lemon & orange, honey-ginger syrup, mint, and a sparkling finish
+          </p>
+        </div>
+        <span class="item-price">28 ريال</span>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+
+            </div>
+        </div>
+    </div>
+    <div id="about" class="page">
+        <div class="page-container">
+            <h1 class="page-title" data-en="Our Story" data-ar="قصتنا">Our Story</h1>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 data-en="A Modern Sanctuary for Meat" data-ar="ملاذ عصري لعشّاق اللحوم">A Modern Sanctuary for Meat</h2>
+                    <p data-en="Solace blends classic steakhouse craft with contemporary technique slowsmoked brisket, livefire ribeye, and Japanese-inspired Wagyu balanced by elegant sides and seasonal produce. We source from small farms, dry-age select cuts in house, and cook over oak and charcoal to build deep, confident flavor." data-ar="تجمع سولاس بين حرفية ستيك هاوس الكلاسيكية والتقنيات الحديثة—بريسكيت مُدخّن ببطء، ريب آي على لهب حي، وقطع واغيو مستلهمة من اليابان—مع أطباق جانبية أنيقة ومنتجات موسمية. نختار مكوّناتنا من مزارع صغيرة، ونعتّق بعض القطع داخل المطعم، ونطهو على خشب البلوط والفحم لنُبرز نكهات عميقة وواثقة.">
+                        Solace blends classic steakhouse craft with contemporary technique slowsmoked brisket, livefire ribeye, and Japanese-inspired Wagyu balanced by elegant sides and seasonal produce. We source from small farms, dry age select cuts in house, and cook over oak and charcoal to build deep, confident flavor.
+                    </p>
+                    <p data-en="Beyond the grill, our chefs craft refined starters, house sauces, and hand-cut garnishes that honor the ingredient first. The room is intimate and warm—dimmed light, natural textures, and attentive service. At Solace, every detail—from the weight of the knife to the final flourish of sea salt—is considered." data-ar="بعيداً عن الشوّاية، يصنع طهاتنا مقبّلات راقية وصلصات منزلية وتزيينات مُحضّرة يدوياً تُبرز المكوّن أولاً. القاعة حميمة ودافئة، إضاءة هادئة وخامات طبيعية وخدمة منتبهة. في سولاس، كل تفصيلة—من وزن السكين إلى لمسة الملح البحري الأخيرة محسوبة بعناية.">
+                        Beyond the grill, our chefs craft refined starters, house sauces, and hand-cut garnishes that honor the ingredient first. The room is intimate and warm—dimmed light, natural textures, and attentive service. At Solace, every detail—from the weight of the knife to the final flourish of sea salt—is considered.
+                    </p>
+                </div>
+            </div> <!-- Close about-content -->
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label" data-en="Awards Won" data-ar="جائزة">Awards Won</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15K+</div>
+                    <div class="stat-label" data-en="Happy Guests" data-ar="ضيف سعيد">Happy Guests</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label" data-en="Years Excellence" data-ar="سنوات من التميز">Years Excellence</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <div class="page-container">
+            <h1 class="page-title" data-en="Reservations" data-ar="حجوزات">Reservations</h1>
+            <div class="contact-container">
+                <div class="contact-grid">
+                    <div class="contact-form">
+                        <form id="reservationForm" class="reservation-form">
+                            <div class="form-group">
+                                <label for="name" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                                <input type="text" id="name" name="name" required 
+                                       data-en-placeholder="Enter your full name" 
+                                       data-ar-placeholder="أدخل اسمك الكامل"
+                                       placeholder="Enter your full name"
+                                       minlength="2" maxlength="50">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+                                <input type="email" id="email" name="email" required 
+                                       data-en-placeholder="Enter your email address" 
+                                       data-ar-placeholder="أدخل عنوان بريدك الإلكتروني"
+                                       placeholder="Enter your email address">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" data-en="Mobile Phone (Saudi Arabia)" data-ar="رقم الجوال (السعودية)">Mobile Phone (Saudi Arabia)</label>
+                                <div class="phone-input-container">
+                                    <div class="country-selector" id="countrySelector">
+                                        <div class="selected-country" id="selectedCountry">
+                                            <img src="https://flagcdn.com/24x18/sa.png" alt="Saudi Arabia" class="country-flag">
+                                            <span class="country-code">+966</span>
+                                        </div>
+                                    </div>
+                                    <input type="tel" id="phone" name="phone" placeholder="5XXXXXXXX" required>
+                                </div>
+                            </div>
+                            <!-- Reservation Date & Time (Quick Picks) -->
+<div class="form-group">
+  <label data-en="Reservation Date" data-ar="تاريخ الحجز">تاريخ الحجز</label>
+
+  <!-- Chips for next 14 days -->
+  <div id="quickDays" class="quick-days"></div>
+
+  <!-- Hidden native input as fallback/submission -->
+  <input id="date" name="date" type="date" class="sr-only" aria-hidden="true">
+</div>
+
+<div class="form-group">
+  <label data-en="Preferred Time" data-ar="الوقت المفضل">الوقت المفضل</label>
+
+  <!-- Time slots appear after selecting a day -->
+  <div id="timeSlots" class="time-slots"></div>
+
+  <!-- Hidden input to submit chosen time -->
+  <input id="time" name="time" type="text" class="sr-only" aria-hidden="true">
+</div>
+                        <div class="form-group">
+                            <label for="guests" data-en="Number of Guests" data-ar="عدد الضيوف">Number of Guests</label>
+                            <input type="number" id="guests" name="guests" min="1" max="10" value="2">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-en="Special Requests" data-ar="طلبات خاصة">Special Requests</label>
+                            <textarea id="message" name="message" rows="4" 
+                                data-en-placeholder="Dietary restrictions, special occasions, etc." 
+                                data-ar-placeholder="قيود غذائية، مناسبات خاصة، إلخ"
+                                placeholder="Dietary restrictions, special occasions, etc."></textarea>
+                        </div>
+                            <button type="submit" class="submit-btn" data-en="Reserve Table" data-ar="احجز الطاولة">Reserve Table</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <h3 class="info-title" data-en="Location" data-ar="الموقع">Location</h3>
+                            <div class="info-details"
+                                data-en="Prince Mohammed Bin Abdulaziz St (Tahlia St), Al Andalus District, Jeddah, Saudi Arabia 23326"
+                                data-ar="شارع الأمير محمد بن عبدالعزيز (التحلية)، حي الأندلس، جدة، المملكة العربية السعودية 23326">
+                                Prince Mohammed Bin Abdulaziz St (Tahlia St), Al Andalus District, Jeddah, Saudi Arabia 23326
+                            </div>
+                        </div>
+
+                   <div class="info-card">
+  <h3 class="info-title" data-en="Hours" data-ar="ساعات العمل">Hours</h3>
+  <div class="info-details"
+       data-en="Tuesday - Thursday: 5:00 PM - 10:00 PM
+Friday - Saturday: 5:00 PM - 11:00 PM
+Sunday: 5:00 PM - 9:00 PM
+Monday: Closed"
+       data-ar="الثلاثاء - الخميس: 5:00 مساءً - 10:00 مساءً
+الجمعة - السبت: 5:00 مساءً - 11:00 مساءً
+الأحد: 5:00 مساءً - 9:00 مساءً
+الاثنين: مغلق">
+    Tuesday - Thursday: 5:00 PM - 10:00 PM
+    Friday - Saturday: 5:00 PM - 11:00 PM
+    Sunday: 5:00 PM - 9:00 PM
+    Monday: Closed
+  </div>
+</div>
+
+                    <div class="info-card">
+                        <h3 class="info-title" data-en="Contact" data-ar="اتصل بنا">Contact</h3>
+                        <div class="info-details" 
+                                data-en="Phone: +966500069692
+                                Email: SolaceReservation@gmail.com"
+       data-ar="الهاتف: +966500069692
+                            البريد الإلكتروني:SolaceReservation@gmail.com "
+    >
+       
+    Phone: +966500069692
+                  Email:SolaceReservation@gmail.com
+                            Private Events: events@solacerestaurant.com
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3 class="info-title" data-en="Dress Code" data-ar="الزي المفضل">Dress Code</h3>
+                        <div class="info-details" 
+                             data-en="Smart casual to formal attire preferred.We ask that guests avoid shorts, flip-flops, and athletic wear to maintain the elegant atmosphere."
+                             data-ar="يفضل ارتداء الملابس الكاجوال الأنيقة أو الرسمية.>نطلب من الضيوف تجنب ارتداء الشورتات والنعال والأحذية الرياضية للحفاظ على الأجواء الأنيقة.">
+                            Smart casual to formal attire preferred.
+                            We ask that guests avoid shorts, flip-flops, and athletic wear to maintain the elegant atmosphere.
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="page-container footer-container">
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2024 Solace Restaurant. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
